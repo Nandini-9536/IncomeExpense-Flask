@@ -11,7 +11,7 @@ def index():
     return render_template('index.html',title='index', entries = entries)
 
 
-@app.route("/add", methods=["GET","POST"])
+@app.route("/add", methods=['POST'])
 def add_expense():
     form = UserInputForm()
     if form.validate_on_submit():
